@@ -67,7 +67,7 @@ class PagesController extends Controller
         $validate = $request->validate([
             'username'=>'required|min:5|max:20',
             'email'=>'required|email|unique:users,email',
-            'password'=>'required'
+            'password'=>'required|min:8'
         ],);
 
         $user = new  User();
